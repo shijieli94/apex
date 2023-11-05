@@ -4,3 +4,13 @@ requires = [
     "wheel",
 ]
 build-backend = "setuptools.build_meta"
+
+[tool.black]
+extend-exclude = '''
+(
+^/examples/|
+^/apex/contrib/csrc/multihead_attn/cutlass|
+^/apex/contrib/csrc/cudnn-frontend|
+^/build/
+)
+'''
